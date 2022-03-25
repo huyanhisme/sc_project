@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico" rel="icon">
+    <title>SoundCloud</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Welcome.css">
+
+</head>
+
+<body>
+    <div class="theme" id="blur">
+        <div class="banner">
+            <img src="https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg" alt="">
+            <h1 class="logo"></h1>
+            <div class="Sign">
+                <button onclick="toggleSignIn()" type="button" class="SignIn-btn" title="Sign In"
+                    aria-label="Sign In">Sign in</button>
+                <button onclick="toggleSignUp()" type="button" class="SignUp-btn" title="Sign Up"
+                    aria-label="Sign Up">Create account</button>
+                <a href="https://creators.soundcloud.com" class="Creator"> For Creators</a>
+            </div>
+            <div class="title">
+                <h2>Connect on SoundCloud</h2>
+                <p>
+                    Discover, stream, and share a constantly expanding mix of music
+                    <br> from emerging and major artists around the world.
+                </p>
+                <button onclick="toggleSignUp()" type="button" class="SignUp-btn" title="Sign Up"
+                    aria-label="Sign Up">Sign up for free</button>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="3000" class="devices">
+            <img src="https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg" alt="">
+            <div data-aos="fade-left" data-aos-duration="3000" class="paragraph">
+                <h2>Never stop listening</h2>
+                <p>SoundCloud is available on <br> Web, iOS, Android, Sonos, Chromecast, and Xbox One.</p>
+                <div class="download">
+                    <a class="ios" href="https://itunes.apple.com/us/app/soundcloud/id336353151?mt=8"></a>
+                    <a class="android"
+                        href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us"></a>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000" class="anotherSign">
+            <h2>
+                Thanks for watching. Now join in.</h2>
+            <p>
+                Save tracks, follow artists and build playlists. All for free.
+            </p>
+            <button onclick="toggleSignUp()" type="button" class="SignUp-btn" title="Sign Up"
+                aria-label="Sign Up">Create
+                account</button>
+            <p style="font-size: 12px;">Already have an account?
+                <button onclick="toggleSignIn()" type="button" class="SignIn-btn" title="Sign In"
+                    aria-label="Sign In">Sign
+                    in</button>
+            </p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000"  class="footer">
+            <div class="AboutUs">
+                <a href="https://soundcloud.com/people/directory/">Directory</a>
+                <a href="https://soundcloud.com/pages/contact">- About us</a>
+                <a href="https://community.soundcloud.com/">- Creator Resources</a>
+                <a href="https://soundcloud.com/terms-of-use">- Legal</a>
+                <a href="https://soundcloud.com/pages/privacy">⁃ Privacy </a>
+                <a href="https://soundcloud.com/pages/cookies">⁃ Cookie Policy</a>
+                <a href="https://soundcloud.com/imprint">⁃ Imprint </a>
+                <a href="https://community.soundcloud.com/">⁃ Creator Resources</a>
+                <a href="https://blog.soundcloud.com/">⁃ Blog</a>
+                <a href="https://soundcloud.com/charts/top">⁃ Charts</a>
+                <p style="font-size: 13px;color: rgb(18, 162, 230);padding: 20px 0;">Language: <p1
+                        style="color: rgb(53, 53, 53)"> English (US)</p1>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <form id="SignUp" class="SignUp">
+        <i onclick="toggleSignUp()" class="fal fa-times"></i>
+        <h2>Create your SoundCloud account</h2>
+        <div class="mb-3">
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Your email address">
+            <div id="emailerror" class="form-text error"></div>
+        </div>
+        <div class="mb-3">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                placeholder="Your password">
+            <div id="passworderror" class="form-text error"></div>
+        </div>
+        <button type="submit" class="SignUp-btn btn btn-primary" title="Sign In" aria-label="Sign In">Sign in</button>
+        <p>Already have an account? <a href="./Signin.html">Sign in</a> </p>
+        <button id="btnGg">Countinue with Google</button>
+    </form>
+    <form id="SignIn" class="SignIn">
+        <i onclick="toggleSignIn()" class="fal fa-times"></i>
+        <h2>Welcome to SoundCloud.<br> Please sign in</h2>
+        <div class="mb-3">
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Your email address">
+        </div>
+        <div class="mb-3">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                placeholder="Your password">
+        </div>
+        <button type="submit" class="SignIn-btn btn btn-primary" title="Sign In" aria-label="Sign In">Sign in</button>
+        <p>You don't have an account? <a href="">Sign up</a> </p>
+        <button id="btnGg">Countinue with Google</button>
+    </form>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./Sign.js"></script>
+    <script src="./Authencation.js" type="module"></script>
+</body>
+
+</html>

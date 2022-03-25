@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.theme {
+  background-color: rgba(231, 231, 231, 0.575);
+  display: flex;
+  flex-direction: column;
+}
+.theme#blur.active {
+  background-color: #fff;
+  filter: blur(10px);
+}
+.theme .banner {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.theme .banner img {
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: #050505 0px 120px 20px -40px;
+}
+.theme .banner::before {
+  content: " ";
+  background-color: #f50;
+  height: 5px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.theme .banner .logo {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  background: transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAQAAAAs/tcnAAABMUlEQVR4Ac3UJfQUARTGUaxnrBHpPeDu7u7uTg/QO/SK9q1U3KHg2i7fH4exNeSdc9/ZNL/RHfRfjdHOuOajt246b7Fh/T38WO/9OnfM7s+hx3gUh5XNWYN7D4wnTlOe6OGsv/6eQlQFmNX9WScTs4jqwD3DOr/j04gJxHyiOsCiTgITibnEdGIJURc410lgJrGYmE+sIuoCz1301BstGwxueqQLiVXEMmI9cVp7c9WIYmAqkUysIjYQa4mtRAJtJwb//kgXEdOJTcR2Yiuxi2g/wIYfgTnEBmIFsYvYS+whDhCdBFo/ApuJvcRO4hBxhDhMHCU6Cbz5EThKHCe+7BNEcXceKFxB/e7yFs0h1hP1u/OHXHiL6nfnr2nhO6jfR3r50L5cR9O+oX5+/FX8vfkElmh0Xu+KRLEAAAAASUVORK5CYII=)
+    no-repeat 12px 11px;
+  background-size: 48px 22px;
+  width: 184px;
+  height: 46px;
+  transform: scale(1.3);
+}
+.theme .banner .logo::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAQAAABZc2uEAAADSUlEQVR4Ae3VbWiVZRgH8Gtrp6aZ017UiSMy06zQLyORYpCEiSl+yMSgIEpdGgjZgl5MLDItkSIbRZwEZfQCRSUppKhpINGw0vyS+Uk0tZSM4+pMt/2CeLihneOOFPRBzvX/sHNf983N9XueBxb/X1WrWtWqVrVc7XmbfeI5N4uU2dpts9701LlDXltarZN3gxAelfdQ1r1WXrsQJsv/nbUWu1FI0WSFzd5xv6tEumGW6JfxVtmiw+NyFSZ4S15euzbThJCSfhjtGIA/LBRCrQ0AeC07+TB2iizHMUUIm1B0qxDGoit7TACcs05kudspAF+rTzcs74ec5yyATqMGnKAIgN3GlGOuw2GtFtmh25x0XZ92j/gA3FuRSafLSpg/e9Jqe0CrEIY6iW8sttIZvVqVZ45UwB6LvKgLGysy11iuQze2l2N+ig4h1JiY9Q7jBZFG2Ksyk2dLmPuzs6/glBCewYnsHTYbL5RnrsZ+demmPk0VmBOEcLteTCtlLgedVhqXdYZAevVTUajI/BzdblOe2QAahY/TQ00py9yKZWl1FDMuihm+wNJSZn32qmG3ccIk9KjJ9keB6yowl9mEfcaVZYbTaBH2Y6HKzB9xX1p9hSUXyXwb6/sxs4zQZqdefCeMAQ3Z3gSclxPmZ/sh1ClgUhqyzXDH8GZZZk4Pxgo78arKzL1YkFYHMK/8BCXMj/B0OWZd9ncOGK5GF+Zm3cdwSAjN6DNCCC1giMQUZqK3LPNBnFGTPev0KRtyQeZGfJj+F3Rj8gATJKYRfsf0UuZ8x8w1SE4relwhvIsjpqjV4iRWCOFKv+F1l5tsBw6IfzDDBpCYDhrmFk8o4GUh3AmeMtj1djlqRrphjZFZrhHuQa8l6o22Dd+rHWCCIpo1me0gflDfn5nzJehRBO8LodEpcB78ZHB2einoBswsYTY4gsQEwPb0zbwHesBpN6UbAPhWCJ+Rzp1z14ATFAHwq4lCYiaotQ7pQ5c3DM26Y2zxJwo6DBMpCxwHh80SJcwwvYR53C4PqEmna61wAmdtNVVckFnnJb+gR6fmChMUQcE+qzSIEmbKcI3SKFnqNKkVJRmZ4P8+jXJC5Yw26L9MEC6lVJmXTqrMvwBTThqYRlj40wAAAABJRU5ErkJggg==)
+    no-repeat 60px 11px;
+  background-size: 115px 22px;
+}
+.theme .banner .Sign {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+}
+.theme .banner .Sign .SignIn-btn {
+  padding: 2px 15px;
+  height: 30px;
+  line-height: 24px;
+  margin: 0 0 0 6px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+}
+.theme .banner .Sign .SignUp-btn {
+  padding: 2px 15px;
+  height: 30px;
+  line-height: 24px;
+  margin: 0 0 0 6px;
+  background: #f50;
+  color: #fff;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+}
+.theme .banner .Sign a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+.theme .banner .title {
+  position: absolute;
+  top: 25%;
+  left: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.theme .banner .title h2 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.theme .banner .title p {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.theme .banner .title .SignUp-btn {
+  font-size: 18px;
+  font-weight: 400;
+  height: 46px;
+  line-height: 46px;
+  background: #f50;
+  color: #fff;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  width: 200px;
+  cursor: pointer;
+}
+.theme .devices {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+}
+.theme .devices img {
+  transform: scale(1.001);
+  width: 60%;
+  padding: 0 20px 0 5%;
+}
+.theme .devices .paragraph {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+}
+.theme .devices .paragraph h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 60px 0 20px 20px;
+}
+.theme .devices .paragraph h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-image: linear-gradient(90deg, #7d01a1, #f30 50%, #f50);
+  margin-top: 15px;
+}
+.theme .devices .paragraph p {
+  font-size: 21px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+.theme .devices .paragraph .download {
+  display: flex;
+  margin: 30px 0 0 20px;
+}
+.theme .devices .paragraph .ios {
+  width: 120px;
+  background-image: url(https://a-v2.sndcdn.com/assets/images/appstore_badge@en-9e7292e6.png);
+  margin-right: 4px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+}
+.theme .devices .paragraph .android {
+  width: 135px;
+  background-image: url(https://a-v2.sndcdn.com/assets/images/google_play_badge@en-51d52194.png);
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+}
+.theme .anotherSign {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.theme .anotherSign h2 {
+  font-size: 33px;
+  color: rgb(53, 53, 53);
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  padding: 50px 0 0 8px;
+}
+.theme .anotherSign p {
+  font-size: 22px;
+  color: rgb(53, 53, 53);
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.theme .anotherSign .SignUp-btn {
+  font-size: 18px;
+  padding: 13px 23px;
+  background-color: #f50;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  width: 200px;
+  cursor: pointer;
+}
+.theme .anotherSign .SignIn-btn {
+  font-size: 15px;
+  padding: 10px;
+  color: rgb(53, 53, 53);
+  background-color: #ffffff;
+  font-weight: 400;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 3px;
+  width: 80px;
+  margin: 10px 12px;
+  cursor: pointer;
+}
+.footer {
+  width: 85%;
+  background-color: white;
+  margin: 0 auto;
+}
+.footer a {
+  text-decoration: none;
+  color: rgb(184, 184, 184);
+  font-weight: 400;
+  font-size: 13px;
+}
+.footer .AboutUs {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 2px solid whitesmoke;
+}
+#SignUp {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border: 1px solid rgba(231, 231, 231, 1);
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0 5px 30px reba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#SignUp h2 {
+  font-size: 33px;
+  color: rgb(53, 53, 53);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#SignUp .mb-3 {
+  width: 80%;
+}
+#SignUp i {
+  position: fixed;
+  right: 2%;
+  top: 1%;
+  font-size: 30px;
+}
+#SignUp .SignUp-btn {
+  font-size: 18px;
+  padding: 13px 23px;
+  background-color: #f50;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  width: 30%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#SignUp.active {
+  top: 40%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+#SignIn {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border: 1px solid rgba(231, 231, 231, 1);
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0 5px 30px reba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#SignIn h2 {
+  font-size: 33px;
+  color: rgb(53, 53, 53);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#SignIn .mb-3 {
+  width: 80%;
+}
+#SignIn i {
+  position: fixed;
+  right: 2%;
+  top: 1%;
+  font-size: 30px;
+}
+#SignIn .SignIn-btn {
+  font-size: 18px;
+  padding: 13px 23px;
+  background-color: #f50;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  width: 30%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#SignIn.active {
+  top: 40%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+#SignUp #btnGg{
+  border-radius: 3px;
+    width: 78%;
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+#SignUp #btnGg::before {
+  background-image:  url(https://secure.sndcdn.com/assets/google-a6c367.svg) ;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  background-size: 50%;
+  width:40px
+}
+#SignIn #btnGg{
+  border-radius: 3px;
+    width: 78%;
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+#SignIn #btnGg::before {
+  background-image:  url(https://secure.sndcdn.com/assets/google-a6c367.svg) ;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  background-size: 50%;
+  width:40px
+}
+
+.error {
+  color: red !important;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico" rel="icon">
+    <title>SoundCloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./splide.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./Home.css">
+
+
+</head>
+
+<body>
+    <div class="bg_web">
+        <div class="banner">
+            <div class="nav">
+                <div class="nav_left">
+                    <div class="logo"></div>
+                    <div class="menu_left">
+                        <ul>
+                            <li><a href="./Home.html">Home</a></li>
+                            <li><a href="../Stream/Stream.html">Stream</a></li>
+                            <li><a href="../Library/Likes.html">Library</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav_middle">
+                    <form class="nav_form" action="">
+                        <input name="search" type="search" placeholder="Search">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+                <div class="nav_right">
+                    <div class="user">
+                        <div class="user_ava"></div>
+                        <div class="user_name"></div>
+                    </div>
+
+                    <div onclick="toggleNoti()" class="noti">
+                    </div>
+                    <div onclick="toggleMess()" class="message "></div>
+                    <div onclick="toggleSet()" class="setting ">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="show_dropdown" class="dropdown_click">
+        </div>
+        <div id="dropdown_set" class="dropdown_set">
+        </div>
+        <div class="theme_container">
+            <div class="theme_left ">
+                <div class="theme_left_content">
+                    <div class="row1">
+
+                        <h2>More of what you like</h2>
+                        <p>Suggestions based on what you've liked or played</p>
+                        <div>
+                            <div class="splide">
+                                <div class="splide__track">
+                                    <div id="list_like" class="splide__list">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <h2>Charts: Top 50</h2>
+                        <p>The most played tracks on SoundCloud this week</p>
+                        <div>
+                            <div id="splide_row2" class="splide">
+                                <div class="splide__track">
+                                    <ul id="list_top50" class="splide__list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <h2>Charts: New & hot</h2>
+                        <p>Up-and-coming tracks on SoundCloud</p>
+                        <div>
+                            <div id="splide_row3" class="splide">
+                                <div class="splide__track">
+                                    <ul id="list_new" class="splide__list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="theme_right">
+            <div class="right_content">
+                <h3>
+                    <span class="icon"></span>
+                    <span class="text">Artists you should follow</span>
+                    <span class="option">Refresh list</span>
+                </h3>
+                <div class="user_sidebar">
+                    <div>
+                        <ul class="user_content">
+                            <li class="user_1"></li>
+                            <li class="user_2"></li>
+                            <li class="user_3"></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>
+                    <span style="color:#999;font-size: 18px;transform: translateY(2px)"
+                        class="material-icons">favorite</span>
+                    <span style="margin-left: -70px;" class="text">Listening history</span>
+                    <span style="background-image: none;" class="option1">View all</span>
+                </h3>
+                <div class="song_sidebar">
+                    
+                </div>
+                <h3>
+                    <span style="color:#999;font-size: 18px;transform: translateY(2px)"
+                        class="material-icons">phone_iphone</span>
+                    <span style="margin-left: -110px;" class="text">Go mobile</span>
+                    <span style="background-image: none;" class="option">Download</span>
+                </h3>
+                <div class="download">
+                    <a class="app" href="https://apps.apple.com/us/app/soundcloud/id336353151"></a>
+                    <a class="gg"
+                        href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us&referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_discover_page"></a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="AboutUs">
+                    <a href="https://soundcloud.com/people/directory/">Directory</a>
+                    <a href="https://soundcloud.com/pages/contact">- About us</a>
+                    <a href="https://community.soundcloud.com/">- Creator Resources</a>
+                    <a href="https://soundcloud.com/terms-of-use">- Legal</a>
+                    <a href="https://soundcloud.com/pages/privacy">⁃ Privacy </a>
+                    <a href="https://soundcloud.com/pages/cookies">⁃ Cookie Policy</a>
+                    <a href="https://soundcloud.com/imprint">⁃ Imprint </a>
+                    <a href="https://community.soundcloud.com/">⁃ Creator Resources</a>
+                    <a href="https://blog.soundcloud.com/">⁃ Blog</a>
+                    <a href="https://soundcloud.com/charts/top">⁃ Charts</a>
+                    <p style="font-size: 13px;color: #38d;;padding: 10px 0;">Language: <p1
+                            style="font-size: 12px;color: #333;"> English (US)</p1>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <audio id="main_audio" class=""></audio>
+    <div class="banner_controls">
+        <div class="banner_content">
+            <div class="controls wrapper">
+                <button class="skip_prev"></button>
+                <div id="play_btn" class="play-pause paused">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <button class="skip_next"></button>
+                <button class="random"></button>
+                <button class="repeat"></button>
+            </div>
+            <div class="progress">
+                <div class="timer">
+                    <span style="margin-right: -10px;" class="currentTime">0:00</span>
+                    <div class="progress_area">
+                        <div class="progress_bar">
+
+                        </div>
+                    </div>
+                    <span style="margin-left: -10px;color:#333" class="duration">0:00</span>
+                    <i id="click_volume" class="material-icons">volume_up
+                    </i>
+                </div>
+            </div>
+
+            <div class="song">
+
+
+            </div>
+        </div>
+    </div>
+    <div class="volume_dropdown">
+        <div class="volume_area">
+            <div class="volume_bar"></div>
+        </div>
+    </div>
+    </div>
+    <script src="./splide.min.js"></script>
+    <script src="./Home.js"></script>
+    <script src="./Songs.js"></script>
+    <script src="./Playmusic.js"></script>
+    <script src="./User.js"></script>
+
+    <script>
+        var list_like = new Splide('.splide', {
+            type: 'loop',
+            padding: '5rem',
+            perPage: 3,
+
+        });
+        list_like.mount();
+
+        var list_like = new Splide('#splide_row2', {
+            type: 'loop',
+            padding: '5rem',
+            perPage: 3,
+
+        });
+        list_like.mount();
+        var list_like = new Splide('#splide_row3', {
+            type: 'loop',
+            padding: '5rem',
+            perPage: 3,
+
+        });
+        list_like.mount();
+    </script>
+</body>
+
+</html>
